@@ -1,0 +1,43 @@
+{% extends 'adminhome.html' %}
+{% load static %}
+{% block 'body' %}
+<h2 align="center" style ="color:red">{{msg}}</h2>
+<h3 align="center"><u>Update Course</u></h3>
+<br>
+
+<form method ="post" action="{% url 'courseupdated' %}">
+  {% csrf_token %}
+  <table align="center" width = "40%" height = "50%">
+    <tr align="center" bgcolor="grey">
+        <td><label>Course ID</label></td>
+        <td><input type="number" name="cid" value="{{cid}}" readonly></td>
+    </tr>
+      <tr align="center">
+      <td><label><b>Enter Course Title</b></label></td>
+      <td>
+      <input type="text" name="ctitle" required>
+      </td>
+    </tr>
+     <tr align="center">
+      <td><label><b>LTPS</b></label></td>
+      <td>
+      <input type="text" name="ltps" required placeholder="X-X-X-X">
+      </td>
+    </tr>
+         <tr align="center">
+      <td><label><b>Credits</b></label></td>
+      <td>
+      <input type="number" name="credits" min="0.0" max="10" required>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2" align="center">
+        <input type="submit" value="UPDATE" class="button">
+        <input type="reset" value="CLEAR" class="button">
+      </td>
+    </tr>
+  </table>
+</form>
+
+{% endblock %}

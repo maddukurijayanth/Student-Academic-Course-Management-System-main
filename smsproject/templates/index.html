@@ -1,0 +1,49 @@
+{% load static %}
+<html lang="en">
+<h2>
+    <meta charset="UTF-8">
+    <title>SMS PROJECT</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<h2 align="center">Student Academic Management System</h2>
+  <nav class="navbar">
+      <div class="logo">LOGO</div>
+      <ul class="nav-links">
+          <div class="menu">
+              <li><a href="{% url 'home' %}">Home</a></li>&nbsp;&nbsp;&nbsp;
+ <li><a href="{% url 'about' %}">About Project</a></li>&nbsp;&nbsp;&nbsp;
+
+              <li class="services">
+
+    <a href="#">Login</a>
+
+    <ul class="dropdown">
+            <li><a href="{% url 'studentlogin' %}">Student</a></li>
+            <li><a href="{% url 'facultylogin' %}">Faculty</a></li>
+            <li><a href="{% url 'login' %}">Admin</a></li>
+
+    </ul>
+
+
+
+</li>&nbsp;&nbsp;&nbsp;
+
+<li>     <a href="{% url 'contact' %}">Contact Us</a>       </li>&nbsp;&nbsp;&nbsp;
+          </div>
+      </ul>
+  </nav>
+<br><br>
+{% block 'body' %}
+<p>I am in Home Page</p>
+
+
+{% endblock %}
+
+</body>
+</html>
