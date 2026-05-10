@@ -90,6 +90,4 @@ Topics Covered
 - PostgreSQL configuration and migration
 - Session management & login
 - Faculty Course Mapping and content upload
-  
-Contributor
-  MUTYALA CHANAKYA SATYA MUKESH
+
